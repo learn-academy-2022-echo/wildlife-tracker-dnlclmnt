@@ -31,6 +31,8 @@ Can create a new animal in the database ✅
 Can update an existing animal in the database ✅
 Can remove an animal entry in the database ✅
 
+
+
 # Story 2: In order to track wildlife sightings, as a user of the API, I need to manage animal sightings.
 
 <!-- Branch: sighting-crud-actions -->
@@ -39,10 +41,13 @@ Can remove an animal entry in the database ✅
 
 Create a resource for animal sightings with the following information: latitude, longitude, date
 Hint: An animal has_many sightings (rails g resource Sighting animal_id:integer ...)
+  rails g resource Sighting animal_id:integer 'latitude:decimal{10,6}' 'longitude:decimal{10,6}' date:date
 Hint: Date is written in Active Record as yyyy-mm-dd (“2022-07-28")
-Can create a new animal sighting in the database
-Can update an existing animal sighting in the database
-Can remove an animal sighting in the database
+Can create a new animal sighting in the database ✅
+Can update an existing animal sighting in the database ✅
+Can remove an animal sighting in the database ✅
+
+
 
 # Story 3: In order to see the wildlife sightings, as a user of the API, I need to run reports on animal sightings.
 
@@ -63,6 +68,8 @@ end
 Hint: Be sure to add the start_date and end_date to what is permitted in your strong parameters method
 Hint: Utilize the params section in Postman to ease the developer experience
 Hint: Routes with params
+
+
 
 # Stretch Challenges
 
