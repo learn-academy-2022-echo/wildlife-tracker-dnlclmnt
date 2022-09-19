@@ -2,7 +2,7 @@ class AnimalsController < ApplicationController
     #Index
     def index
         animals = Animal.all
-        render json: animals
+        render json: animals, include: [:sightings]
     end
     #Show
     def show
